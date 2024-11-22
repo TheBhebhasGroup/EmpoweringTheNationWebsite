@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="./img/etnlogo.jpg">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./img/Background.jpg');
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #d8a272;
+            padding: 10px;
+        }
+
+        header img {
+            width: 65px;
+            height: 65px;
+        }
+
+        header h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #d8a272;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            display: none;
+            background-color: #444;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 200px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .container h1,
+        .container h2 {
+            text-align: center;
+        }
+
+        .inputs {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .inputs .input {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .inputs .input label,
+        .inputs .input input {
+            display: block;
+            width: 100%;
+        }
+
+        .inputs .input input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .course-check {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .course-check span {
+            margin: 0 5px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #d8a272;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c07d57;
+        }
+        .inputs{
+          gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/etnlogo.jpg" alt="Logo">
+        <h1>Empowering the Nation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>
+                <a href="#">Courses</a>
+                <ul>
+                    <li><a href="./courses.html">First Aid</a></li>
+                    <li><a href="./courses.html">Sewing</a></li>
+                    <li><a href="./courses.html">Landscaping</a></li>
+                    <li><a href="./courses.html">Life Skills</a></li>
+                </ul>
+            </li>
+            <li><a href="./campuses.html">Campuses</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Book Our Courses</h1>
+        <p>Please enter your details and select the courses you wish to book:</p>
+        <div class="inputs">
+            <div class="input">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" placeholder="Your first name">
+            </div>
+            <div class="input">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" placeholder="Your last name">
+            </div>
+            <div class="input">
+              <label for="pnumber">Phone Number:</label>
+              <input type="tel" id="pnumber" placeholder="Your cellphone number">
+          </div>
+          <div class="input">
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" placeholder="Your Email Address">
+        </div>
+        </div>
+
+        <h2>Available Courses</h2>
+        <div id="course-list">
+            <div class="course-check">
+                <input type="checkbox" id="firstaid" data-price="1500">
+                <label for="firstaid">First Aid</label>
+                <span>R1500</span>
+            </div>
+            <div class="course-check">
+                <input type="checkbox" id="sewing" data-price="1500">
+                <label for="sewing">Sewing</label>
+                <span>R1500</span>
+            </div>
+            <div class="course-check">
+              <input type="checkbox" id="landscaping" data-price="1500">
+              <label for="landscaping">Landscaping</label>
+              <span>R1500</span>
+          </div>
+          <div class="course-check">
+            <input type="checkbox" id="lifeskills" data-price="1500">
+            <label for="lifeskills">Life Skills</label>
+            <span>R1500</span>
+        </div>
+        <div class="course-check">
+          <input type="checkbox" id="childminding" data-price="750">
+          <label for="childminding">Child Minding</label>
+          <span>R750</span>
+      </div>
+      <div class="course-check">
+        <input type="checkbox" id="cooking" data-price="750">
+        <label for="cooking">Cooking</label>
+        <span>R750</span>
+      </div>
+      <div class="course-check">
+      <input type="checkbox" id="gardenmaintenance" data-price="750">
+      <label for="gardenmaintenance">Garden Maintenance</label>
+      <span>R750</span>
+    </div>
+        </div>
+
+        <button id="calculate-btn">Calculate</button>
+<p id="discount">Discount: R0.00</p>
+<p id="total">Total: R0.00</p>
+    </div>
+
+    <script>
+      const calculateButton = document.getElementById('calculate-btn');
+      const totalDisplay = document.getElementById('total');
+      const discountDisplay = document.getElementById('discount');
+  
+      calculateButton.addEventListener('click', () => {
+          let total = 0;
+          let discount = 0;
+  
+          // Get all selected courses
+          const courses = document.querySelectorAll('.course-check input[type="checkbox"]:checked');
+          const courseCount = courses.length;
+  
+          // Calculate the total price
+          courses.forEach(course => {
+              total += parseInt(course.dataset.price);
+          });
+  
+          // Calculate discount if applicable
+          if (courseCount >= 2) {
+              const discountPercentage = (courseCount - 1) * 5; // 5% for each additional course
+              discount = (total * discountPercentage) / 100; // Calculate the discount amount
+              total -= discount; // Subtract the discount from the total
+          }
+  
+          // Update the display
+          discountDisplay.textContent = `Discount: R${discount.toFixed(2)}`;
+          totalDisplay.textContent = `Total: R${total.toFixed(2)}`;
+      });
+  </script>
+  
+  
+</body>
+</html>
